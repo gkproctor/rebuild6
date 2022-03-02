@@ -1,0 +1,38 @@
+Saved a copy of this query before removing "image" part due to errors
+export const query = graphql`
+  query LocationQuery {
+    locations: allSanityLocation {
+      nodes {
+        name
+        id
+        slug {
+          current
+        }
+        radioChannel
+        additionalInfo
+        appleMapsUrl
+        googleMapsUrl
+        image {
+          asset {
+            fluid(maxWidth: 410) {
+              ...GatsbySanityImageFluid
+            }
+          }
+        }
+      }
+    }
+  }
+`;
+
+This should return a list in alphabetical order but crashes the page
+export const query = graphql`
+  query LocationQuery {
+    locations: allSanityLocation(sort: { fields: name, order: ASC }) {
+      edges {
+        node {
+          name
+        }
+      }
+    }
+  }
+`;
