@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { navigate } from 'gatsby-link'
+import { navigate } from 'gatsby-link';
 import SEO from '../components/SEO';
 
 function encode(data) {
@@ -61,19 +61,6 @@ export default function ContactPage() {
             Your email:
             <br />
             <input type="email" name="email" onChange={handleChange} required />
-          </label>
-        </p>
-        <p>
-          <label>
-            Your Role:{' '}
-            {/* this div was added to change the format of the page */}
-            <div>
-              <select name="role[]" multiple required>
-                <option value="leader">Driver</option>
-                <option value="follower">Crew</option>
-                <option value="follower">Other</option>
-              </select>
-            </div>
           </label>
         </p>
         <p>
