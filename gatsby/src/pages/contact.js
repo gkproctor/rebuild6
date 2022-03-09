@@ -44,27 +44,27 @@ export default function ContactPage() {
         {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
         <input type="hidden" name="form-name" value="contact" />
         <p hidden>
-          <label>
+          <label htmlFor="clowns">
             You're a sucker!!:{' '}
             <input name="clownsOnly" onChange={handleChange} />
           </label>
         </p>
         <p>
-          <label>
+          <label htmlFor="name">
             Your name:
             <br />
             <input type="text" name="name" onChange={handleChange} required />
           </label>
         </p>
         <p>
-          <label>
+          <label htmlFor="email">
             Your email:
             <br />
             <input type="email" name="email" onChange={handleChange} required />
           </label>
         </p>
         <p>
-          <label>
+          <label htmlFor="message">
             Message:
             <br />
             <textarea name="message" onChange={handleChange} required />
