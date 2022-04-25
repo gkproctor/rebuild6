@@ -33,6 +33,14 @@ export default function ContactPage() {
   return (
     <>
       <SEO title="Contact" />
+      <div className="left">
+        <p>
+          Send me a message if you have any suggestions or if you find a
+          problem. If you want a location added that is between Prado and the
+          Ports then please fill out this form to let me know. I'll check it out
+          and get back to you.
+        </p>
+      </div>
       <form
         name="contact"
         method="post"
